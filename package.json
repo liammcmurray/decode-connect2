@@ -1,0 +1,22 @@
+{
+  "name": "disconnect",
+  "version": "1.0.0",
+  "description": "URL decoder for EA",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liammcmurray/disconnect.git"
+  },
+  "author": "liammcmurray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liammcmurray/disconnect/issues"
+  },
+  "homepage": "https://github.com/liammcmurray/disconnect#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
