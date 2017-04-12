@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>unholy mess</title>
+  </head>
+  <body>
+  <form name="decoder">
+  <label for="badURL">Paste URL here</label>
+  <input type="text" name="badURL" id="badURL" value="https://connect2.environment-agency.gov.uk/owa/,DanaInfo=webmail.prodds.ntnl,SSL+redir.aspx?C=6q6bDqZEH0uJ9HwEbq0zc-0-2LRsb9QI8W1HK85OarF68mviKlXa-17RuQ_PCMHodyKsi-Vl_9k.&URL=https%3a%2f%2fintranet.defra.gov.uk%2fforms%2fhomeworking-telephone-service-registration%2f">
+  </form>
+<script>
+// Define a function to grab the input from the form and chop it up
+//var 
+
+var outboundLink = document.getElementsByName("badURL")[0].value;;
+var encodedLink = outboundLink.split('&URL=')[1];
+var realLink = decodeURIComponent(encodedLink);
+console.log(realLink);
+document.write("<a href="+realLink+">link</a>");
+</script>
+</html>
