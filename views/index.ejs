@@ -30,9 +30,6 @@ https://connect2.environment-agency.gov.uk/owa/,DanaInfo=webmail.prodds.ntnl,SSL
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
 <!-- local css overwrites -->
     <link rel="stylesheet" href="css/style.css">
-
-<!-- Compressed JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
   </head>
   <body>
     <main>
@@ -44,24 +41,26 @@ https://connect2.environment-agency.gov.uk/owa/,DanaInfo=webmail.prodds.ntnl,SSL
       </div>
       <div class="row">
         <div class="small-12 medium-6 large-4 columns ends">
-          <a id="resolved" class="hide" href="#">New link</a>
-          <form name="decoder">
+          <a id="resolved" class="button hide" href="#">New link</a>
+          <form id="enterURL" name="decoder">
             <fieldset>
               <label for="badURL">Paste URL to fix</label>
               <textarea name="badURL" id="badURL"></textarea>
-            </fieldset>
-          </form>
+            </fieldset>          
 <script>
-function connect2decoder(outboundLInk, encodeLink, realLink) {
+function connect2decoder(outboundLInk, encodeLink, realLink, hideForm, showLink) {
     outboundLink = document.getElementsByName("badURL")[0].value;;
     encodedLink = outboundLink.split('&URL=')[1];
     realLink = decodeURIComponent(encodedLink);
-
-    document.write("<a href="+realLink+">Fixed it for you</a>");
-    //document.getElementById("resolved").setAttribute("href",realLink);
+//Change visibility of interactive elements once new URL is created
+    enterURL.classList.add("hide");
+    hideButton.classList.add("hide");
+    resolved.classList.remove("hide");
 }
 </script>
-          <button class="button" onclick="connect2decoder()">Decode URL</button>
+            
+          </form>
+          <button id="hideButton" class="button" onclick="connect2decoder()">Decode URL</button>
         </div>
       </div>
     </main>
