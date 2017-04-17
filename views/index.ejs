@@ -6,17 +6,30 @@ https://connect2.environment-agency.gov.uk/owa/,DanaInfo=webmail.prodds.ntnl,SSL
   <head>
     <meta charset="UTF-8">
     <title>EA URL Decoder</title>
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
+    <!-- local css overwrites -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Compressed JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
   </head>
   <body>
     <main>
-      <h1>Disconnect2</h1>
-      <form name="decoder">
-        <fieldset>
-          <label for="badURL">Paste URL to fix</label>
-          <textarea name="badURL" id="badURL"></textarea>
-        </fieldset>
-      </form>
+      <div class="row">
+        <div class="small-12 columns">
+          <h1>Disconnect2</h1>
+          <p>Making links work again in Outlook Web for off-network users.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 medium-6 large-4 columns ends">
+          <form name="decoder">
+            <fieldset>
+              <label for="badURL">Paste URL to fix</label>
+              <textarea name="badURL" id="badURL"></textarea>
+            </fieldset>
+          </form>
 <script>
 function connect2decoder(outboundLInk, encodeLink, realLink) {
     outboundLink = document.getElementsByName("badURL")[0].value;;
@@ -26,7 +39,9 @@ function connect2decoder(outboundLInk, encodeLink, realLink) {
     document.write("<a href="+realLink+">Fixed it for you</a>");
 }
 </script>
-      <button onclick="connect2decoder()">Decode URL</button>
+          <button class="button" onclick="connect2decoder()">Decode URL</button>
+        </div>
+      </div>
     </main>
   </body>
 </html>
