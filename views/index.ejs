@@ -57,8 +57,8 @@ function connect2decoder(outboundLInk, encodeLink, realLink) {
     encodedLink = outboundLink.split('&URL=')[1];
     realLink = decodeURIComponent(encodedLink);
 
-    //document.write("<a href="+realLink+">Fixed it for you</a>");
-    document.getElementById("resolved").setAttribute("href",realLink);
+    document.write("<a href="+realLink+">Fixed it for you</a>");
+    //document.getElementById("resolved").setAttribute("href",realLink);
 }
 </script>
           <button class="button" onclick="connect2decoder()">Decode URL</button>
