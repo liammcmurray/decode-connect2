@@ -6,12 +6,32 @@ https://connect2.environment-agency.gov.uk/owa/,DanaInfo=webmail.prodds.ntnl,SSL
   <head>
     <meta charset="UTF-8">
     <title>EA URL Decoder</title>
-    <!-- Compressed CSS -->
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="images/favicon/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="images/favicon/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16.png">
+    <link rel="apple-touch-icon" href="images/favicon/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/favicon-144.png">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+<!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
-    <!-- local css overwrites -->
+<!-- local css overwrites -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Compressed JavaScript -->
+<!-- Compressed JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -24,6 +44,7 @@ https://connect2.environment-agency.gov.uk/owa/,DanaInfo=webmail.prodds.ntnl,SSL
       </div>
       <div class="row">
         <div class="small-12 medium-6 large-4 columns ends">
+          <a id="resolved" class="hide" href="#">New link</a>
           <form name="decoder">
             <fieldset>
               <label for="badURL">Paste URL to fix</label>
@@ -36,7 +57,8 @@ function connect2decoder(outboundLInk, encodeLink, realLink) {
     encodedLink = outboundLink.split('&URL=')[1];
     realLink = decodeURIComponent(encodedLink);
 
-    document.write("<a href="+realLink+">Fixed it for you</a>");
+    //document.write("<a href="+realLink+">Fixed it for you</a>");
+    document.getElementById("resolved").setAttribute("href",realLink);
 }
 </script>
           <button class="button" onclick="connect2decoder()">Decode URL</button>
