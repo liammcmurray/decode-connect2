@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "npm test",
+    "test": "echo \"No test specified yet\" && exit 0",
     "start": "node server.js"
   },
   "repository": {
