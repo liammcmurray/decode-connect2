@@ -48,14 +48,19 @@ https://connect2.environment-agency.gov.uk/owa/,DanaInfo=webmail.prodds.ntnl,SSL
               <textarea name="badURL" id="badURL"></textarea>
             </fieldset>          
 <script>
-function connect2decoder(outboundLInk, encodeLink, realLink, hideForm, showLink) {
+function connect2decoder(outboundLInk) {
     outboundLink = document.getElementsByName("badURL")[0].value;;
     encodedLink = outboundLink.split('&URL=')[1];
     realLink = decodeURIComponent(encodedLink);
-//Change visibility of interactive elements once new URL is created
+// Put new link into href element of <a> on page
+    document.getElementById("resolved").setAttribute("href",realLink);
+
+//Change visibility of interactive elements once new link is created
     enterURL.classList.add("hide");
     hideButton.classList.add("hide");
     resolved.classList.remove("hide");
+
+
 }
 </script>
             
