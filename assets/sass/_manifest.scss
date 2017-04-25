@@ -1,0 +1,25 @@
+// ******************************************************************
+// DISCONNECT APP
+// ******************************************************************
+// Author @liammcmurray
+
+
+// CHARSET
+@charset 'UTF-8';
+
+
+// ==================================================================
+// SETUP
+// ==================================================================
+
+// A) Import universal partials - Include the core partials in here first, as the others will have dependencies
+// B) Import universal framework settings file, e.g. Foundation if applicable
+// C) Import framework components
+// D) Import partials which rely on framework
+
+
+// A) Universal partials
+@import "variables";
+// Framework (Foundation 6) being imported statically at present, this should change to reduce bandwidth load, by being very selective
+// D) Import partials which rely on framework 
+@import "base";

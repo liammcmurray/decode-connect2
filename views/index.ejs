@@ -42,7 +42,8 @@ https://connect2.environment-agency.gov.uk/owa/,DanaInfo=webmail.prodds.ntnl,SSL
       </div>
       <div class="row">
         <div class="small-12 medium-6 large-4 columns ends">
-          <a id="resolved" class="button hide" href="#">New link</a>
+          <p id="resolvedText" class="hide"></p>
+          <a id="resolved" class="button hide" href="#">Visit this link</a>
           <form id="enterURL" name="decoder" method="post">
             <fieldset>
               <label for="badURL">Paste URL to fix</label>
@@ -54,18 +55,20 @@ function connect2decoder(outboundLInk) {
 
 if (outboundLink === "") 
 {
-    confirm ('No URL found in the textarea');
+    confirm ('No URL found in the text input, please try again');
 }
 else 
 {
     encodedLink = outboundLink.split('&URL=')[1];
     realLink = decodeURIComponent(encodedLink);
-// Put new link into href element of <a> on page
+// Put new link into href element of <a> on page, and display for confirmation
     document.getElementById("resolved").setAttribute("href",realLink);
+    document.getElementById("resolvedText").innerHTML = realLink;
 
 //Change visibility of interactive elements once new link is created
     enterURL.classList.add("hide");
     hideButton.classList.add("hide");
+    resolvedText.classList.remove("hide");
     resolved.classList.remove("hide");
 }
 
