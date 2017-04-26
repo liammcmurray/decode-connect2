@@ -1,11 +1,8 @@
 html {
   height: 100%; }
 
-body {
-  color: #fff; }
-
+body,
 label {
-  background-color: rgba(0, 0, 0, 0.6);
   color: #fff; }
 
 .wrapper {
@@ -14,7 +11,20 @@ label {
   background-size: cover;
   bottom: 0%;
   left: 0%;
-  padding-top: 300px;
+  padding-top: 210px;
   position: fixed;
   right: 0%;
   top: 0%; }
+
+.row {
+  background-color: rgba(0, 175, 65, 0.4); }
+
+form#enterURL {
+  padding-top: 34px; }
+
+.heading-medium {
+  font-size: 30px; }
+
+.button {
+  background-color: #f78913;
+  color: #000; }

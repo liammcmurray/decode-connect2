@@ -2,12 +2,8 @@ html {
   height: 100%;
 }
 
-body {
-  color: $white;
-}
-
+body,
 label {
-  background-color: $shaded;
   color: $white;
 }
 
@@ -17,8 +13,26 @@ label {
   background-size: cover;
   bottom: 0%;
   left: 0%;
-  padding-top: 300px;
+  padding-top: 210px;
   position: fixed;
   right: 0%;
   top: 0%;
+}
+
+.row {
+  background-color: $pantone-354;
+}
+
+form#enterURL {
+  padding-top: 34px;
+}
+
+.heading-medium {
+  font-size: 30px;
+}
+
+.button {
+  background-color: $pantone-144;
+  color: $black;
+
 }
