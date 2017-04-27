@@ -1,10 +1,10 @@
+// ==========================================================================
+// WRAPPER
+// ==========================================================================
+
+// Provides the full-screen background image
 html {
   height: 100%;
-}
-
-body,
-label {
-  color: $white;
 }
 
 .wrapper {
@@ -17,22 +17,4 @@ label {
   position: fixed;
   right: 0%;
   top: 0%;
-}
-
-.row {
-  background-color: $pantone-354;
-}
-
-form#enterURL {
-  padding-top: 34px;
-}
-
-.heading-medium {
-  font-size: 30px;
-}
-
-.button {
-  background-color: $pantone-144;
-  color: $black;
-
 }

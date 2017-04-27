@@ -1,9 +1,26 @@
-html {
-  height: 100%; }
-
 body,
 label {
   color: #fff; }
+
+.button {
+  background-color: #f78913;
+  color: #000; }
+  .button:hover {
+    background-color: rgba(0, 175, 65, 0.2);
+    color: #fff; }
+
+form#enterURL {
+  padding-top: 34px; }
+
+.row {
+  max-width: 100%;
+  padding: 0 30px; }
+
+.heading-medium {
+  font-size: 30px; }
+
+html {
+  height: 100%; }
 
 .wrapper {
   background-image: url("/images/body_bg.jpg");
@@ -15,16 +32,3 @@ label {
   position: fixed;
   right: 0%;
   top: 0%; }
-
-.row {
-  background-color: rgba(0, 175, 65, 0.4); }
-
-form#enterURL {
-  padding-top: 34px; }
-
-.heading-medium {
-  font-size: 30px; }
-
-.button {
-  background-color: #f78913;
-  color: #000; }

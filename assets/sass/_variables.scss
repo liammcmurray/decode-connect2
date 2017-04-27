@@ -1,13 +1,16 @@
-
+// ==========================================================================
+// DEFINE VARIABLES USED THOUGHOUT (INCLUDE FIRST)
+// ==========================================================================
 // Colours
 $shaded: rgba(0, 0, 0, .6);
 $white: #fff;
 $black: #000;
-
-//Orange
-$pantone-354: rgba(0, 175, 65, .4);
-
 //EA Green
+$pantone-354: rgba(0, 175, 65, .2);
+//Orange
 $pantone-144: rgba(247, 137, 19, 1);
 
 // Metrics
+// Baseline values - using GDS defualts here
+$vertical: 15px;
+$horizontal: 30px;
