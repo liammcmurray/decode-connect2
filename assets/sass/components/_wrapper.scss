@@ -1,0 +1,20 @@
+// ==========================================================================
+// WRAPPER
+// ==========================================================================
+
+// Provides the full-screen background image
+html {
+  height: 100%;
+}
+
+.wrapper {
+  background-image: url('/images/body_bg.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  bottom: 0%;
+  left: 0%;
+  padding-top: 210px;
+  position: fixed;
+  right: 0%;
+  top: 0%;
+}

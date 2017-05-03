@@ -1,0 +1,30 @@
+// ******************************************************************
+// DISCONNECT APP
+// ******************************************************************
+// Author @liammcmurray
+
+
+// CHARSET
+@charset 'UTF-8';
+
+
+// ==================================================================
+// SETUP
+// ==================================================================
+
+// A) Import universal partials - Include the core partials in here first, as the others will have dependencies
+// B) Import universal framework settings file, e.g. Foundation if applicable
+// C) Import framework components
+// D) Import app components last
+
+
+// A) Universal partials
+@import 'variables';
+// B) & C) Framework (Foundation 6) being imported statically at present, this should change to reduce bandwidth load, by being very selective
+// D) Application components
+@import 'components/base';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/grid';
+@import 'components/typography';
+@import 'components/wrapper';

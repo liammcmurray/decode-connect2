@@ -32,19 +32,18 @@ https://connect2.environment-agency.gov.uk/owa/,DanaInfo=webmail.prodds.ntnl,SSL
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+  <div class="wrapper">
     <main>
       <div class="row">
         <div class="small-12 columns">
-          <h1>Disconnect2</h1>
-          <p>Making links work again in Outlook Web for off-network users.</p>
+          <img src="images/environment-agency.png" />
         </div>
-      </div>
-      <div class="row">
-        <div class="small-12 medium-6 large-4 columns ends">
-          <a id="resolved" class="button hide" href="#">New link</a>
-          <form id="enterURL" name="decoder" method="post">
+        <div class="small-12 columns">
+          <p class="heading-small" id="resolvedText" class="hide"></p>
+          <a id="resolved" class="button hide" href="#">Visit this link</a>
+          <form id="enterURL" class="disconnect-form" name="decoder" method="post">
             <fieldset>
-              <label for="badURL">Paste URL to fix</label>
+              <label class="heading-medium" for="badURL">Paste original URL here:</label>
               <textarea name="badURL" id="badURL"></textarea>
             </fieldset>          
 <script>
@@ -53,28 +52,30 @@ function connect2decoder(outboundLInk) {
 
 if (outboundLink === "") 
 {
-    confirm ('No URL found in the textarea');
+    alert ('No URL found in the text input, please try again');
 }
 else 
 {
     encodedLink = outboundLink.split('&URL=')[1];
     realLink = decodeURIComponent(encodedLink);
-// Put new link into href element of <a> on page
+// Put new link into href element of <a> on page, and display for confirmation
     document.getElementById("resolved").setAttribute("href",realLink);
+    document.getElementById("resolvedText").innerHTML = realLink;
 
 //Change visibility of interactive elements once new link is created
     enterURL.classList.add("hide");
     hideButton.classList.add("hide");
+    resolvedText.classList.remove("hide");
     resolved.classList.remove("hide");
 }
 
 }
 </script>
-            
           </form>
-          <button id="hideButton" class="button" onclick="connect2decoder()">Decode URL</button>
+          <button id="hideButton" class="button" onclick="connect2decoder()">Decode</button>
         </div>
       </div>
     </main>
+    </div>
   </body>
 </html>

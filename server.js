@@ -19,5 +19,5 @@ app.get('/', function(req, res) {
 });
 
 app.listen(port, function() {
-    console.log('Disconnect is running on http://localhost:' + port);
+    console.log('Disconnect is up and running on http://localhost:' + port);
 });

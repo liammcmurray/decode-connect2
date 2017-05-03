@@ -1,2 +1,40 @@
-body    { padding-top:50px; }
-.container .jumbotron    { border-radius:40px; }
+body,
+label {
+  color: #fff; }
+
+.button {
+  background-color: #f78913;
+  color: #000; }
+  .button:hover {
+    background-color: #00af41;
+    color: #fff; }
+
+.disconnect-form textarea {
+  color: #777;
+  font-size: 1.2em;
+  min-height: 100px; }
+
+.row {
+  background-color: rgba(40, 40, 40, 0.6);
+  max-width: 100%;
+  padding: 0 30px; }
+
+.heading-medium {
+  font-size: 30px; }
+
+.heading-small {
+  font-size: 24px; }
+
+html {
+  height: 100%; }
+
+.wrapper {
+  background-image: url("/images/body_bg.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  bottom: 0%;
+  left: 0%;
+  padding-top: 210px;
+  position: fixed;
+  right: 0%;
+  top: 0%; }
