@@ -6,18 +6,24 @@ label {
   background-color: #f78913;
   color: #000; }
   .button:hover {
-    background-color: rgba(0, 175, 65, 0.2);
+    background-color: #00af41;
     color: #fff; }
 
-form#enterURL {
-  padding-top: 34px; }
+.disconnect-form textarea {
+  color: #777;
+  font-size: 1.2em;
+  min-height: 100px; }
 
 .row {
+  background-color: rgba(40, 40, 40, 0.6);
   max-width: 100%;
   padding: 0 30px; }
 
 .heading-medium {
   font-size: 30px; }
+
+.heading-small {
+  font-size: 24px; }
 
 html {
   height: 100%; }
