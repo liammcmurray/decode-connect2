@@ -6,10 +6,28 @@ $white: #fff;
 $grey: #777;
 $shadow: rgba(40, 40, 40, .6);
 $black: #000;
-//EA Green
-$pantone-354: rgba(0, 175, 65, 1);
-//Orange
-$pantone-144: rgba(247, 137, 19, 1);
+
+// ** EA COLOURS ************************************************************
+// Magentas
+$pantone-262: rgba(86, 0, 78, 1);     // Darkest
+$pantone-242: rgba(130, 0, 83, 1);    // Dark
+$pantone-227: rgba(190, 5, 83, 1));   // Medium
+$pantone-226: rgba(235, 18, 120, 1)); // Bright
+// Brown/Orange
+$pantone-175: rgba(121, 47, 2, 1));   // Darkest
+$pantone-1525: rgba(217, 95, 21, 1)); // Medium
+$pantone-144: rgba(247, 137, 19, 1)); // Orange
+$pantone-1225: rgba(253, 202, 0, 1)); // Pale
+// Green
+$pantone-574: rgba(69, 90, 33, 1));   // Darkest
+$pantone-354: rgba(0, 175, 65, 1));   // EA Green
+$pantone-390: rgba(178, 195, 38, 1)); // Lime
+$pantone-381: rgba(210, 222, 38, 1)); // Acid
+// Blue
+$pantone-539: rgba(0, 43, 84, 1));    // Darkest
+$pantone-2945: rgba(3, 75, 137, 1));  // Medium
+$pantone-2925: rgba(1, 119, 186, 1)); // Light
+$pantone-2985: rgba(84, 188, 231, 1));// Pale
 
 // Metrics
 // Baseline values - using GDS defualts here
